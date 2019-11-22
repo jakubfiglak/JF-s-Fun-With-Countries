@@ -13,10 +13,12 @@
 <body>
   <div class="wrapper">
     <header class="welcome">
-      <div class="logo">
-        <img src="./assets/chimp-32_pink.png" alt="Monkey logo">
+      <div class="top">
+        <div class="logo">
+          <img src="./assets/chimp-32_pink.png" alt="Monkey logo">
+        </div>
+        <div class="hamburger"><i class="fas fa-bars"></i></div>
       </div>
-      <div class="hamburger"><i class="fas fa-bars"></i></div>
       <p>Welcome to...</p>
       <div class="hero">
         <img src="./assets/globe-1339833_200.png" alt="Planet Earth image">
@@ -25,23 +27,26 @@
       <button class="btn">Get started!</button>
     </header>
     <main>
-      <form class="search-form">
-        <label for="search">Search for a country you're curious about...</label>
-        <input type="text" class="search" id="search" placeholder="Country">
-      </form>
-      <div class="country-card">
-        <h2 class="country-name">Name</h2>
-        <div class="flag">
-          <img src="" alt="Country flag">
+      <section class="country-search">
+        <form class="search-form">
+          <h3>Search for a country you're curious about...</h3>
+          <label for="search">Country</label>
+          <input type="text" class="search" id="search">
+        </form>
+        <div class="country-card">
+          <h2 class="country-name">Name</h2>
+          <div class="flag">
+            <img src="" alt="Country flag">
+          </div>
+          <ul class="country-facts">
+            <li>Capital city: </li>
+            <li>Region: </li>
+            <li>Subregion: </li>
+            <li>Area: </li>
+            <li>Population: </li>
+          </ul>
         </div>
-        <ul class="country-facts">
-          <li>Capital city: </li>
-          <li>Region: </li>
-          <li>Subregion: </li>
-          <li>Area: </li>
-          <li>Population: </li>
-        </ul>
-      </div>
+      </section>
     </main>
   </div>
 </body>

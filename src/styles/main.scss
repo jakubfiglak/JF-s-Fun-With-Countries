@@ -10,6 +10,7 @@ html {
     font-family: $main-font;
     font-size: 10px;
     background-color: $gray;
+    color: white;
 }
 
 *,
@@ -27,5 +28,58 @@ img {
 }
 
 .welcome {
+    @include flex-section-column();
     font-family: $header-font;
+    text-align: center;
+
+    .top {
+        @include flex-row();
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+
+        .logo {
+            padding-left: 5%;
+        }
+
+        .hamburger {
+            padding-right: 5%;
+            font-size: 2.5em;
+            color: $pink;
+        }
+    }
+
+    p {
+        font-size: 2em;
+    }
+
+    .hero img {
+        margin: 0 auto;
+    }
+
+    .btn {
+        background-color: $pink;
+        font-weight: bold;
+        border: none;
+        border-radius: 10px;
+        box-shadow: 0 0 8px black;
+        text-transform: uppercase;
+        color: white;
+        padding: 10px 30px;
+    }
+}
+
+.country-search {
+    @include flex-section-column();
+    text-align: center;
+    padding: 20px;
+
+    h3 {
+        display: block;
+        font-size: 1.5em;
+    }
+
+    .search {
+        border: none;
+    }
 }
