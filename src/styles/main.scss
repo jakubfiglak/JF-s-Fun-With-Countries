@@ -2,6 +2,7 @@
 @import 'variables';
 @import 'mixins';
 @import '/node_modules/swiper/css/swiper.min.css';
+@import '/node_modules/materialize-css/dist/css/materialize.min.css';
 
 
 html {
@@ -57,12 +58,16 @@ img {
         margin: 0 auto;
     }
 
-    .btn {
+    h1 {
+        font-size: 3em;
+    }
+
+    .startBtn {
         background-color: $pink;
         font-weight: bold;
         border: none;
         border-radius: 10px;
-        box-shadow: 0 0 8px black;
+        box-shadow: 0 0 8px $light-gray;
         text-transform: uppercase;
         color: white;
         padding: 10px 30px;
@@ -79,7 +84,51 @@ img {
         font-size: 1.5em;
     }
 
+    .input-field {
+        margin-top: 20px;
+    }
+
     .search {
-        border: none;
+        color: white;
+    }
+
+    .active+#search {
+        border-bottom-color: $pink;
+        box-shadow: none;
+    }
+
+    .swiper-container {
+        width: 90%;
+    }
+
+    .country-card {
+        @include flex-section-column();
+        width: 98%;
+        background-color: $light-gray;
+        height: 100%;
+
+        .country-card-header {
+            @include flex-row();
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .country-name {
+            font-size: 2em;
+        }
+
+        .country-facts {
+            li {
+                padding: 10px;
+            }
+        }
+    }
+}
+
+.swiper-container {
+
+    .swiper-button-next,
+    .swiper-button-prev {
+        color: $pink;
     }
 }

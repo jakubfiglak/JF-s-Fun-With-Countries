@@ -1,5 +1,6 @@
 import axios from 'axios';
 import Swiper from 'swiper';
+import forms from 'materialize-css';
 
 const endpoint = 'https://restcountries.eu/rest/v2/all';
 
@@ -11,14 +12,10 @@ export const app = () => {
     //     })
     //     .catch(error => console.log(error));
 
-    // const swiper = new Swiper('.swiper-container', {
-    //     pagination: {
-    //         el: '.swiper-pagination',
-    //         type: 'fraction',
-    //     },
-    //     navigation: {
-    //         nextEl: '.swiper-button-next',
-    //         prevEl: '.swiper-button-prev',
-    //     },
-    // });
+    const swiper = new Swiper('.swiper-container', {
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+    });
 }
