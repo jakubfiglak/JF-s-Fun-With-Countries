@@ -7,8 +7,12 @@ import {
 import {
     scrollOnClick
 } from './js/scroll';
+import {
+    searchCountries
+} from './js/searchCountries'
 import './styles/main.scss';
 
 app();
 hamburger();
 scrollOnClick();
+searchCountries();
