@@ -4,28 +4,22 @@ export const searchCountries = () => {
     const endpoint = 'https://restcountries.eu/rest/v2/name/';
     const searchInput = document.querySelector('.search');
 
-    function getData() {
-        if (this.value) {
-            const countries = [];
-            const searchWord = this.value;
-            axios.get(`${endpoint}${searchWord}`)
-                .then(response => countries.push(...response.data))
-                .catch(error => console.log(error));
-
-            console.log(countries);
-            // return countries;
-
-            // const countriesData = countries.map(country => country.name);
-            // console.log(countriesData);
-            console.log(countries[0]);
+    async function getData() {
+        try {
+            if (this.value) {
+                const countries = [];
+                const filter = '?fields=name;flag;capital;region;area;population';
+                const searchWord = this.value;
+                const response = await axios.get(`${endpoint}${searchWord}${filter}`);
+                // console.log(response);
+                countries.push(...response.data);
+                console.log(countries);
+                console.log(countries[0].name);
+            }
+        } catch (error) {
+            console.error(error);
         }
     };
-
-    // function displayData() {
-    //     const countries = getData();
-
-    // }
-
     searchInput.addEventListener('keyup', getData);
 
 }
