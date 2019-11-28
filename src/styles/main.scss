@@ -1,42 +1,164 @@
 @import 'custom';
+@import 'variables';
+@import 'mixins';
 @import '/node_modules/swiper/css/swiper.min.css';
 @import '/node_modules/materialize-css/dist/css/materialize.min.css';
 
-html,
-body {
-    position: relative;
-    height: 100%;
+
+html {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    font-family: $main-font;
+    font-size: 10px;
+    background-color: $gray;
+    color: white;
 }
 
-body {
-    background: #eee;
-    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-    font-size: 14px;
-    color: #000;
+*,
+*:before,
+*:after {
+    -webkit-box-sizing: inherit;
+    box-sizing: inherit;
     margin: 0;
     padding: 0;
 }
 
-.swiper-container {
-    width: 100%;
-    height: 100%;
+img {
+    display: block;
+    max-width: 100%;
 }
 
-.swiper-slide {
+.welcome {
+    @include flex-section-column();
+    font-family: $header-font;
     text-align: center;
-    font-size: 18px;
-    background: #fff;
-    /* Center slide text vertically */
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    -webkit-justify-content: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    -webkit-align-items: center;
-    align-items: center;
+    position: relative;
+
+    .top {
+        @include flex-row();
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+
+        .logo {
+            padding-left: 5%;
+        }
+
+        .hamburger {
+            padding-right: 5%;
+            font-size: 2.5em;
+            color: $pink;
+            transition: .3s linear;
+
+            .fas {
+                display: none;
+            }
+
+            .fas.show {
+                display: block;
+            }
+        }
+    }
+
+    .nav {
+        position: absolute;
+        top: 0;
+        left: -30%;
+        background-color: $pink;
+        height: 100%;
+        width: 30%;
+        transition: .3s linear;
+
+        nav {
+            background-color: $pink;
+            border: none;
+            box-shadow: none;
+        }
+    }
+
+    .nav.show {
+        left: 0;
+    }
+
+    p {
+        font-size: 2em;
+    }
+
+    .hero img {
+        margin: 0 auto;
+    }
+
+    h1 {
+        font-size: 3em;
+    }
+
+    .startBtn {
+        background-color: $pink;
+        font-weight: bold;
+        border: none;
+        border-radius: 10px;
+        box-shadow: 0 0 8px $light-gray;
+        text-transform: uppercase;
+        color: white;
+        padding: 10px 30px;
+    }
+}
+
+.country-search {
+    @include flex-section-column();
+    text-align: center;
+    padding: 20px;
+
+    h3 {
+        display: block;
+        font-size: 1.5em;
+    }
+
+    .input-field {
+        margin-top: 20px;
+    }
+
+    .search {
+        color: white;
+    }
+
+    .active+#search {
+        border-bottom-color: $pink;
+        box-shadow: none;
+    }
+
+    .swiper-container {
+        width: 90%;
+    }
+
+    .country-card {
+        @include flex-section-column();
+        width: 98%;
+        background-color: $light-gray;
+        height: 100%;
+
+        .country-card-header {
+            @include flex-row();
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .country-name {
+            font-size: 2em;
+        }
+
+        .country-facts {
+            li {
+                padding: 10px;
+            }
+        }
+    }
+}
+
+.swiper-container {
+
+    .swiper-button-next,
+    .swiper-button-prev {
+        color: $pink;
+    }
 }

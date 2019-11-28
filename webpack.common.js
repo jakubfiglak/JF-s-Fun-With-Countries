@@ -4,8 +4,7 @@ module.exports = {
     vendor: './src/vendor.js'
   },
   module: {
-    rules: [
-      {
+    rules: [{
         test: /\.html$/,
         use: ['html-loader']
       },
