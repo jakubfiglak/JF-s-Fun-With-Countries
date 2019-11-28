@@ -3,6 +3,7 @@
 @import 'mixins';
 @import '/node_modules/swiper/css/swiper.min.css';
 @import '/node_modules/materialize-css/dist/css/materialize.min.css';
+@import '/node_modules/ol/ol.css';
 
 
 html {
@@ -26,6 +27,7 @@ html {
 img {
     display: block;
     max-width: 100%;
+    max-height: 100%;
 }
 
 .welcome {
@@ -128,19 +130,24 @@ img {
     }
 
     .swiper-container {
-        width: 90%;
+        flex-basis: 70%;
+        width: 100%;
     }
 
     .country-card {
         @include flex-section-column();
-        width: 98%;
         background-color: $light-gray;
         height: 100%;
 
         .country-card-header {
             @include flex-row();
-            justify-content: space-between;
+            justify-content: space-around;
             align-items: center;
+
+            .flag {
+                flex-basis: 140px;
+                height: 84px;
+            }
         }
 
         .country-name {
@@ -160,5 +167,15 @@ img {
     .swiper-button-next,
     .swiper-button-prev {
         color: $pink;
+    }
+}
+
+.map {
+    height: 100vh;
+    overflow: hidden;
+
+    #map {
+        height: 50%;
+        width: 100%;
     }
 }

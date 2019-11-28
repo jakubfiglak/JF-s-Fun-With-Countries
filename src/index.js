@@ -9,8 +9,11 @@ import {
 } from './js/scroll';
 import {
     searchCountries
-} from './js/searchCountries'
+} from './js/searchCountries';
 import './styles/main.scss';
+import {
+    map
+} from './js/map';
 
 app();
 hamburger();
