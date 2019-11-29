@@ -1,4 +1,4 @@
-export const scrollOnClick = () => {
+export const scrollToSection = (button, section) => {
     const offset = (el) => {
         const rect = el.getBoundingClientRect(),
             scrollTop = window.pageYOffset || document.documentElement.scrollTop;
@@ -7,10 +7,10 @@ export const scrollOnClick = () => {
         };
     }
 
-    const startBtn = document.querySelector('.startBtn');
+    const startBtn = document.querySelector(button);
 
     startBtn.addEventListener('click', () => {
-        const div = document.querySelector('.country-search');
+        const div = document.querySelector(section);
         const divOffset = offset(div);
         window.scrollTo({
             left: 0,

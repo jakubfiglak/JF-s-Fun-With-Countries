@@ -25,8 +25,8 @@
       <aside class="nav">
         <nav>
           <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Search info</a></li>
+            <li><a class="home" href="#">Home</a></li>
+            <li><a class="search-info" href="#">Search info</a></li>
             <li><a href="#">Capital quiz</a></li>
             <li><a href="#">Flag quiz</a></li>
           </ul>
@@ -37,7 +37,7 @@
         <img src="./assets/globe-1339833_200.png" alt="Planet Earth image">
       </div>
       <h1>Jakub Figlak's Fun With Countries</h1>
-      <button class="startBtn">Get started!</button>
+      <button class="startBtn waves-effect waves-light btn pink lighten-2">Get started!</button>
     </header>
     <main>
       <section class="country-search">
@@ -48,61 +48,59 @@
             <input type="text" class="search" id="search">
           </div>
         </form>
-        <div class="swiper-container">
-          <div class="swiper-wrapper">
-            <!-- <div class="country-card swiper-slide">
-              <div class="country-card-header">
-                <h2 class="country-name">Name</h2>
-                <div class="flag">
-                  <img src="" alt="Country flag">
-                </div>
+        <div class="carousel">
+          <div class="country-card carousel-item">
+            <div class="country-card-header">
+              <h2 class="country-name">Name</h2>
+              <div class="flag">
+                <img src="" alt="Country flag">
               </div>
-              <ul class="country-facts">
-                <li>Capital city: </li>
-                <li>Region: </li>
-                <li>Subregion: </li>
-                <li>Area: </li>
-                <li>Population: </li>
-              </ul>
             </div>
-            <div class="country-card swiper-slide">
-              <div class="country-card-header">
-                <h2 class="country-name">Name</h2>
-                <div class="flag">
-                  <img src="" alt="Country flag">
-                </div>
-              </div>
-              <ul class="country-facts">
-                <li>Capital city: </li>
-                <li>Region: </li>
-                <li>Subregion: </li>
-                <li>Area: </li>
-                <li>Population: </li>
-              </ul>
-            </div> -->
-            <!-- <div class="country-card swiper-slide">
-              <div class="country-card-header">
-                <h2 class="country-name">Name</h2>
-                <div class="flag">
-                  <img src="" alt="Country flag">
-                </div>
-              </div>
-              <ul class="country-facts">
-                <li>Capital city: </li>
-                <li>Region: </li>
-                <li>Subregion: </li>
-                <li>Area: </li>
-                <li>Population: </li>
-              </ul> -->
+            <ul class="country-facts">
+              <li>Capital city: </li>
+              <li>Region: </li>
+              <li>Subregion: </li>
+              <li>Area: </li>
+              <li>Population: </li>
+            </ul>
           </div>
-        </div>
+          <div class="country-card carousel-item">
+            <div class="country-card-header">
+              <h2 class="country-name">Name</h2>
+              <div class="flag">
+                <img src="" alt="Country flag">
+              </div>
+            </div>
+            <ul class="country-facts">
+              <li>Capital city: </li>
+              <li>Region: </li>
+              <li>Subregion: </li>
+              <li>Area: </li>
+              <li>Population: </li>
+            </ul>
+          </div>
+          <div class="country-card carousel-item">
+            <div class="country-card-header">
+              <h2 class="country-name">Name</h2>
+              <div class="flag">
+                <img src="" alt="Country flag">
+              </div>
+            </div>
+            <ul class="country-facts">
+              <li>Capital city: </li>
+              <li>Region: </li>
+              <li>Subregion: </li>
+              <li>Area: </li>
+              <li>Population: </li>
+            </ul>
+          </div>
 
-  </div>
-  </section>
-  <section class="map">
-    <div id="map"></div>
-  </section>
-  </main>
+        </div>
+      </section>
+      <section class="map">
+        <div id="map"></div>
+      </section>
+    </main>
   </div>
 </body>
 

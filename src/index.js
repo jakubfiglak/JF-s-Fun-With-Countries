@@ -5,10 +5,11 @@ import {
     hamburger
 } from './js/hamburger';
 import {
-    scrollOnClick
+    scrollToSection
 } from './js/scroll';
 import {
-    searchCountries
+    searchCountries,
+    carousel
 } from './js/searchCountries';
 import './styles/main.scss';
 import {
@@ -17,5 +18,6 @@ import {
 
 app();
 hamburger();
-scrollOnClick();
-searchCountries();
+scrollToSection('.startBtn', '.country-search');
+scrollToSection('.search-info', '.country-search');
+carousel();
