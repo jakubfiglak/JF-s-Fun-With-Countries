@@ -17,6 +17,9 @@ import {
 import {
     generateTest
 } from './js/generateTest';
+import {
+    displayTest
+} from './js/displayTest';
 
 app();
 hamburger();
@@ -27,4 +30,5 @@ scrollToSection('#capital-quiz', '.capital-quiz');
 scrollToSection('#flag-quiz', '.flag-quiz');
 searchCountries();
 // getDataForTest();
-generateTest();
+// generateTest();
+displayTest();

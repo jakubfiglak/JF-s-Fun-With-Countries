@@ -2,19 +2,21 @@ import {
     getDataForTest
 } from "./getDataForTest"
 import {
-    generateRandomArr
-} from "./generateRandomArr";
-import {
     getCountriesForTest
 } from "./getCountriesForTest";
+import {
+    generateQandA
+} from "./generateQaA";
 
 export async function generateTest() {
     try {
         const countries = await getDataForTest();
-        const indexArr = generateRandomArr(0, countries.length, 10);
-        console.log(indexArr);
-        const countriesForTest = getCountriesForTest(indexArr, countries);
-        console.log(countriesForTest);
+        const capitalCities = countries.map(el => el.capital);
+        // console.log(capitalCities);
+        const countriesForTest = getCountriesForTest(countries, 10);
+        // console.log(countriesForTest);
+        generateQandA(countriesForTest, capitalCities);
+        return countriesForTest;
     } catch (error) {
         console.log(error);
     };
