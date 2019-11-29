@@ -104,7 +104,9 @@ img {
     }
 }
 
-.country-search {
+.country-search,
+.capital-quiz,
+.flag-quiz {
     @include flex-section-column();
     text-align: center;
     padding: 20px;
@@ -114,18 +116,25 @@ img {
         font-size: 1.5em;
     }
 
-    .input-field {
-        margin-top: 20px;
+    .search-form {
+        flex-basis: 30%;
+        align-self: flex-start;
+
+        .input-field {
+            margin-top: 20px;
+        }
+
+        .search {
+            color: white;
+        }
+
+        .active+#search {
+            border-bottom-color: $pink;
+            box-shadow: none;
+        }
     }
 
-    .search {
-        color: white;
-    }
 
-    .active+#search {
-        border-bottom-color: $pink;
-        box-shadow: none;
-    }
 
     .swiper-container {
         width: 90%;
@@ -133,7 +142,6 @@ img {
 
     .country-card {
         @include flex-section-column();
-        width: 98%;
         background-color: $light-gray;
         height: 100%;
 
