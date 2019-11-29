@@ -9,8 +9,14 @@ import {
 } from './js/scroll';
 import {
     searchCountries
-} from './js/searchCountries'
+} from './js/searchCountries';
 import './styles/main.scss';
+import {
+    getDataForTest
+} from './js/getDataForTest';
+import {
+    generateTest
+} from './js/generateTest';
 
 app();
 hamburger();
@@ -20,3 +26,5 @@ scrollToSection('#search-info', '.country-search');
 scrollToSection('#capital-quiz', '.capital-quiz');
 scrollToSection('#flag-quiz', '.flag-quiz');
 searchCountries();
+// getDataForTest();
+generateTest();

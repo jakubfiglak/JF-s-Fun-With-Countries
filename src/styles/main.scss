@@ -25,7 +25,8 @@ html {
 
 img {
     display: block;
-    max-width: 100%;
+    width: 100%;
+    height: 100%;
 }
 
 .welcome {
@@ -93,14 +94,7 @@ img {
     }
 
     .startBtn {
-        background-color: $pink;
-        font-weight: bold;
-        border: none;
-        border-radius: 10px;
-        box-shadow: 0 0 8px $light-gray;
-        text-transform: uppercase;
-        color: white;
-        padding: 10px 30px;
+        @include button();
     }
 }
 
@@ -110,6 +104,7 @@ img {
     @include flex-section-column();
     text-align: center;
     padding: 20px;
+    position: relative;
 
     h3 {
         display: block;
@@ -118,7 +113,6 @@ img {
 
     .search-form {
         flex-basis: 30%;
-        align-self: flex-start;
 
         .input-field {
             margin-top: 20px;
@@ -134,39 +128,49 @@ img {
         }
     }
 
-
-
     .swiper-container {
-        width: 90%;
-    }
-
-    .country-card {
-        @include flex-section-column();
+        flex-basis: 70%;
         background-color: $light-gray;
-        height: 100%;
+        width: 90%;
 
-        .country-card-header {
-            @include flex-row();
-            justify-content: space-between;
-            align-items: center;
-        }
+        .country-card {
+            @include flex-section-column();
+            background-color: $light-gray;
+            height: 100%;
 
-        .country-name {
-            font-size: 2em;
-        }
+            .country-card-header {
+                @include flex-row();
+                width: 100%;
+                justify-content: space-around;
+                align-items: center;
 
-        .country-facts {
-            li {
-                padding: 10px;
+                .country-name {
+                    font-size: 2em;
+                }
+
+                .flag {
+                    width: 120px;
+                    height: 72px;
+                }
+
+            }
+
+            .country-facts {
+                li {
+                    padding: 10px;
+                }
             }
         }
+
+        .swiper-button-next,
+        .swiper-button-prev {
+            color: $pink;
+        }
     }
-}
 
-.swiper-container {
-
-    .swiper-button-next,
-    .swiper-button-prev {
-        color: $pink;
+    .create {
+        .createBtn {
+            @include button();
+        }
     }
 }

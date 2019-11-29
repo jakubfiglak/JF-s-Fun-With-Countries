@@ -19,3 +19,14 @@
     align-items: center;
     height: 100vh;
 }
+
+@mixin button() {
+    background-color: $pink;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 0 8px $light-gray;
+    text-transform: uppercase;
+    color: white;
+    padding: 10px 30px;
+}
