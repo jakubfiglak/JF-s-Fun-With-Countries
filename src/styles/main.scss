@@ -27,13 +27,8 @@ html {
 
 img {
     display: block;
-<<<<<<< HEAD
-    max-width: 100%;
-    max-height: 100%;
-=======
     width: 100%;
     height: 100%;
->>>>>>> dev
 }
 
 .welcome {
@@ -100,13 +95,10 @@ img {
     h1 {
         font-size: 3em;
     }
-<<<<<<< HEAD
-=======
 
     .startBtn {
         @include button();
     }
->>>>>>> dev
 }
 
 .country-search {
@@ -145,24 +137,6 @@ img {
 
     .swiper-container {
         flex-basis: 70%;
-<<<<<<< HEAD
-        width: 100%;
-    }
-
-    .country-card {
-        @include flex-section-column();
-        background-color: $light-gray;
-        height: 100%;
-
-        .country-card-header {
-            @include flex-row();
-            justify-content: space-around;
-            align-items: center;
-
-            .flag {
-                flex-basis: 140px;
-                height: 84px;
-=======
         background-color: $light-gray;
         width: 90%;
 
@@ -192,7 +166,6 @@ img {
                 li {
                     padding: 10px;
                 }
->>>>>>> dev
             }
         }
 
@@ -241,18 +214,7 @@ img {
     }
 }
 
-<<<<<<< HEAD
-.map {
-    height: 100vh;
-    overflow: hidden;
-
-    #map {
-        height: 50%;
-        width: 100%;
-    }
-=======
 .capital-quiz,
 .flag-quiz {
     min-height: 100vh;
->>>>>>> dev
 }
