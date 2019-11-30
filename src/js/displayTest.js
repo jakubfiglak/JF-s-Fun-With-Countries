@@ -2,12 +2,13 @@ import {
     generateTest
 } from "./generateTest";
 
-export async function displayTest() {
+export async function displayTest(questions) {
     try {
-        const questions = await generateTest();
-        console.log(questions);
+        // const questions = await generateTest();
+        // console.log(questions);
 
         const quizContainer = document.querySelector('#capital-quiz-container');
+        const checkBtn = document.querySelector('.checkBtn');
 
         const output = [];
 
@@ -17,7 +18,7 @@ export async function displayTest() {
             currentQuestion.answers.forEach((el, idx) => {
                 answers.push(
                     `<label>
-                    <input type="radio" class="with-gap" name="question${questionNumber}" value="${idx}">
+                    <input type="radio" class="with-gap" name="question${questionNumber}" value="${currentQuestion.answers[idx]}">
                     <span>
                     ${currentQuestion.answers[idx]}
                     </span>
@@ -32,10 +33,10 @@ export async function displayTest() {
                 `
             )
         });
-        output.push(`
-        <button class="checkBtn">Check your answers!</button>
-        `);
+
         quizContainer.innerHTML = output.join('');
+        checkBtn.style.display = 'block';
+
     } catch (error) {
         console.log(error);
     }

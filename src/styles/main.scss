@@ -206,10 +206,11 @@ img {
                 background-color: $pink;
             }
         }
+    }
 
-        .checkBtn {
-            @include button();
-        }
+    .checkBtn {
+        display: none;
+        @include button();
     }
 }
 

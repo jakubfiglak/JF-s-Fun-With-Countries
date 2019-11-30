@@ -7,15 +7,21 @@ import {
 import {
     checkResults
 } from "./checkTestResults";
+import {
+    displayTest
+} from './displayTest';
 
 export async function runTest() {
-    try {
-        const questions = await generateTest();
-        console.log(questions);
-        await displayTestOnClick(questions);
+    const button = document.querySelector('.createBtn');
 
-        const button = document.querySelector('.checkBtn');
-        button.addEventListener('click', checkResults);
+
+    try {
+        button.addEventListener('click', async () => {
+            const questions = await generateTest();
+            console.log(questions);
+            await displayTest(questions);
+            await checkResults(questions);
+        })
     } catch (error) {
         console.log(error);
     }
