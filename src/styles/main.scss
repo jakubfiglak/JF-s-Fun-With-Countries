@@ -12,6 +12,7 @@ html {
     font-size: 10px;
     background-color: $gray;
     color: white;
+    scroll-behavior: smooth;
 }
 
 *,
@@ -31,6 +32,7 @@ img {
 
 .welcome {
     @include flex-section-column();
+    height: 100vh;
     font-family: $header-font;
     text-align: center;
     position: relative;
@@ -96,6 +98,10 @@ img {
     .startBtn {
         @include button();
     }
+}
+
+.country-search {
+    height: 100vh;
 }
 
 .country-search,
@@ -171,15 +177,43 @@ img {
     .create {
         .createBtn {
             @include button();
+            margin-bottom: 20px;
+        }
+    }
+
+    #capital-quiz-container {
+
+        .question {
+            font-family: $main-font;
+            font-size: 15px;
+        }
+
+        .answers {
+            @include flex-section-column;
+            align-items: flex-start;
+            padding: 10px 50px;
+            font-family: $main-font;
+            font-size: 12px;
+
+            [type="radio"]:checked+span:after,
+            [type="radio"].with-gap:checked+span:before,
+            [type="radio"].with-gap:checked+span:after {
+                border: 2px solid $pink;
+            }
+
+            [type="radio"]:checked+span:after,
+            [type="radio"].with-gap:checked+span:after {
+                background-color: $pink;
+            }
+        }
+
+        .checkBtn {
+            @include button();
         }
     }
 }
 
-input[type=radio] {
-    display: block;
-    color: black;
-    height: 30px;
-    width: 30px;
-    background-color: white;
-
+.capital-quiz,
+.flag-quiz {
+    min-height: 100vh;
 }

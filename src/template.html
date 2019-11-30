@@ -12,7 +12,7 @@
 
 <body>
   <div class="wrapper">
-    <header class="welcome">
+    <header class="welcome" id="welcome">
       <div class="top">
         <div class="logo">
           <img src="./assets/chimp-32_pink.png" alt="Monkey logo">
@@ -25,10 +25,10 @@
       <aside class="nav">
         <nav>
           <ul>
-            <li><a href="#" id="home">Home</a></li>
-            <li><a href="#" id="search-info">Search info</a></li>
-            <li><a href="#" id="capital-quiz">Capital quiz</a></li>
-            <li><a href="#" id="flag-quiz">Flag quiz</a></li>
+            <li><a href="#welcome">Home</a></li>
+            <li><a href="#country-search">Search info</a></li>
+            <li><a href="#capital-quiz">Capital quiz</a></li>
+            <li><a href="#flag-quiz">Flag quiz</a></li>
           </ul>
         </nav>
       </aside>
@@ -40,7 +40,7 @@
       <button class="startBtn">Get started!</button>
     </header>
     <main>
-      <section class="country-search">
+      <section class="country-search" id="country-search">
         <form class="search-form">
           <h3>Search for a country you're curious about...</h3>
           <div class="input-field">
@@ -56,14 +56,14 @@
         </div>
   </div>
   </section>
-  <section class="capital-quiz">
+  <section class="capital-quiz" id="capital-quiz">
     <div class="create">
       <h3>Test your knowledge about capital cities!</h3>
       <button class="createBtn">Generate test!</button>
     </div>
     <div id="capital-quiz-container"></div>
   </section>
-  <section class="flag-quiz">
+  <section class="flag-quiz" id="flag-quiz">
     <div class="create">
       <h3>Test your knowledge about flags!</h3>
       <button class="createBtn">Generate test!</button>

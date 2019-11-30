@@ -16,11 +16,12 @@ export async function displayTest() {
 
             currentQuestion.answers.forEach((el, idx) => {
                 answers.push(
-                    `<div><input type="radio" name="question${questionNumber}" value="${idx}">
-                    <label>
+                    `<label>
+                    <input type="radio" class="with-gap" name="question${questionNumber}" value="${idx}">
+                    <span>
                     ${currentQuestion.answers[idx]}
+                    </span>
                     </label>
-                    </div>
                     `
                 );
             });
@@ -31,7 +32,9 @@ export async function displayTest() {
                 `
             )
         });
-
+        output.push(`
+        <button class="checkBtn">Check your answers!</button>
+        `);
         quizContainer.innerHTML = output.join('');
     } catch (error) {
         console.log(error);
