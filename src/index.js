@@ -27,4 +27,4 @@ searchCountries();
 generateTest();
 // runTest();
 displayTestOnClick();
-// checkResults();
+checkResults();

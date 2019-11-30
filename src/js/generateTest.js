@@ -8,6 +8,8 @@ import {
     generateQandA
 } from "./generateQaA";
 
+export const q = [];
+
 export async function generateTest() {
     try {
         const countries = await getDataForTest();
@@ -16,6 +18,7 @@ export async function generateTest() {
         const countriesForTest = getCountriesForTest(countries, 10);
         // console.log(countriesForTest);
         generateQandA(countriesForTest, capitalCities);
+        q.push(...countriesForTest);
         return countriesForTest;
     } catch (error) {
         console.log(error);
