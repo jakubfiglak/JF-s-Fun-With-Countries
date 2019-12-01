@@ -24,7 +24,7 @@ import {
 app();
 hamburger();
 searchCountries();
-generateTest();
-// runTest();
-displayTestOnClick();
+// generateTest();
+runTest();
+// displayTestOnClick();
 // checkResults();

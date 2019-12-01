@@ -95,10 +95,6 @@ img {
     h1 {
         font-size: 3em;
     }
-
-    .startBtn {
-        @include button();
-    }
 }
 
 .country-search {
@@ -207,10 +203,11 @@ img {
                 background-color: $pink;
             }
         }
+    }
 
-        .checkBtn {
-            @include button();
-        }
+    .checkBtn {
+        display: none;
+        @include button();
     }
 }
 
