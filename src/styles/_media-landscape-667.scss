@@ -1,0 +1,34 @@
+@import 'mixins';
+
+@media (min-width: 533px) and (orientation: landscape) {
+    .wrapper {
+        .welcome {
+            .nav a {
+                font-size: 1.5em;
+            }
+        }
+
+        .country-search {
+            .country-card {
+                .country-facts {
+                    font-size: 1.3em;
+                }
+            }
+        }
+
+        .capital-quiz {
+            #capital-quiz-container {
+                .question {
+                    font-size: 1.8em;
+                }
+
+                .answers {
+                    span {
+                        font-size: 2em;
+                    }
+                }
+            }
+
+        }
+    }
+}

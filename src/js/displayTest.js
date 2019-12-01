@@ -1,12 +1,5 @@
-import {
-    generateTest
-} from "./generateTest";
-
 export async function displayTest(questions) {
     try {
-        // const questions = await generateTest();
-        // console.log(questions);
-
         const quizContainer = document.querySelector('#capital-quiz-container');
         const checkBtn = document.querySelector('.checkBtn');
 
