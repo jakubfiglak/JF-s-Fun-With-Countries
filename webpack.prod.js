@@ -1,11 +1,13 @@
 const path = require('path'),
-      merge = require('webpack-merge'),
-      HtmlWebpackPlugin = require('html-webpack-plugin'),
-      { CleanWebpackPlugin } = require('clean-webpack-plugin'),
-      MiniCssExtractPlugin = require('mini-css-extract-plugin'),
-      OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin'),
-      TerserPlugin = require('terser-webpack-plugin'),
-      common = require('./webpack.common');
+  merge = require('webpack-merge'),
+  HtmlWebpackPlugin = require('html-webpack-plugin'),
+  {
+    CleanWebpackPlugin
+  } = require('clean-webpack-plugin'),
+  MiniCssExtractPlugin = require('mini-css-extract-plugin'),
+  OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin'),
+  TerserPlugin = require('terser-webpack-plugin'),
+  common = require('./webpack.common');
 
 
 module.exports = merge(common, {
@@ -19,7 +21,17 @@ module.exports = merge(common, {
       new OptimizeCssAssetsPlugin(),
       new TerserPlugin(),
       new HtmlWebpackPlugin({
+        filename: 'index.html',
         template: './src/template.html',
+        minify: {
+          removeAttributeQuotes: true,
+          collapseWhitespace: true,
+          removeComments: true
+        }
+      }),
+      new HtmlWebpackPlugin({
+        filename: 'capital-quiz.html',
+        template: './src/capital-quiz.html',
         minify: {
           removeAttributeQuotes: true,
           collapseWhitespace: true,
@@ -35,8 +47,7 @@ module.exports = merge(common, {
     })
   ],
   module: {
-    rules: [
-      {
+    rules: [{
         test: /\.m?js$/,
         exclude: /(node_modules|bower_components)/,
         use: {
