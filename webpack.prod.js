@@ -1,18 +1,20 @@
 const path = require('path'),
-      merge = require('webpack-merge'),
-      HtmlWebpackPlugin = require('html-webpack-plugin'),
-      { CleanWebpackPlugin } = require('clean-webpack-plugin'),
-      MiniCssExtractPlugin = require('mini-css-extract-plugin'),
-      OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin'),
-      TerserPlugin = require('terser-webpack-plugin'),
-      common = require('./webpack.common');
+  merge = require('webpack-merge'),
+  HtmlWebpackPlugin = require('html-webpack-plugin'),
+  {
+    CleanWebpackPlugin
+  } = require('clean-webpack-plugin'),
+  MiniCssExtractPlugin = require('mini-css-extract-plugin'),
+  OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin'),
+  TerserPlugin = require('terser-webpack-plugin'),
+  common = require('./webpack.common');
 
 
 module.exports = merge(common, {
   mode: 'production',
   output: {
     filename: '[name].[contentHash].bundle.js',
-    path: path.resolve(__dirname, 'dist')
+    path: path.resolve(__dirname, 'docs')
   },
   optimization: {
     minimizer: [
@@ -35,8 +37,7 @@ module.exports = merge(common, {
     })
   ],
   module: {
-    rules: [
-      {
+    rules: [{
         test: /\.m?js$/,
         exclude: /(node_modules|bower_components)/,
         use: {
