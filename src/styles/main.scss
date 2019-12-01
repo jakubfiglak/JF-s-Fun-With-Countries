@@ -94,10 +94,6 @@ img {
     h1 {
         font-size: 3em;
     }
-
-    .startBtn {
-        @include button();
-    }
 }
 
 .country-search {
