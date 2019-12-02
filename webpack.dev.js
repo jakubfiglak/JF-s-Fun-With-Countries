@@ -2,9 +2,11 @@ const HtmlWebpackPlugin = require('html-webpack-plugin'),
   path = require('path'),
   merge = require('webpack-merge'),
   common = require('./webpack.common');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = merge(common, {
   mode: 'development',
+  devtool: 'source-map',
   output: {
     filename: '[name].bundle.js',
     path: path.resolve(__dirname, 'dist')
@@ -13,20 +15,29 @@ module.exports = merge(common, {
     rules: [{
       test: /\.scss$/,
       use: [
-        'style-loader',
-        'css-loader',
-        'sass-loader'
+        MiniCssExtractPlugin.loader,
+        {
+          loader: 'css-loader',
+          options: {
+            sourceMap: true
+          }
+        },
+        {
+          loader: 'sass-loader',
+          options: {
+            sourceMap: true,
+          }
+        }
       ]
     }]
   },
   plugins: [
     new HtmlWebpackPlugin({
-      filename: 'index.html',
       template: './src/template.html'
     }),
-    new HtmlWebpackPlugin({
-      filename: 'capital-quiz.html',
-      template: './src/capital-quiz.html'
-    })
+    new MiniCssExtractPlugin({
+      // Options similar to the same options in webpackOptions.output
+      filename: "[name].css",
+    }),
   ]
 });

@@ -21,17 +21,7 @@ module.exports = merge(common, {
       new OptimizeCssAssetsPlugin(),
       new TerserPlugin(),
       new HtmlWebpackPlugin({
-        filename: 'index.html',
         template: './src/template.html',
-        minify: {
-          removeAttributeQuotes: true,
-          collapseWhitespace: true,
-          removeComments: true
-        }
-      }),
-      new HtmlWebpackPlugin({
-        filename: 'capital-quiz.html',
-        template: './src/capital-quiz.html',
         minify: {
           removeAttributeQuotes: true,
           collapseWhitespace: true,

@@ -1,14 +1,18 @@
+import './styles/main.scss';
 import {
-    hamburger
-} from './js/hamburger';
+    generateSelectData
+} from './js/generateSelectData';
+
+
 import {
     searchCountries
 } from './js/searchCountries';
-import './styles/main.scss';
-import {
-    runTest
-} from './js/runTest';
+// import './styles/main.scss';
+// import {
+//     runTest
+// } from './js/runTest';
 
-hamburger();
+// hamburger();
 searchCountries();
-runTest();
+generateSelectData();
+// runTest();
