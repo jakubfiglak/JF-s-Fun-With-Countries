@@ -1,0 +1,45 @@
+@media (min-width: 768px) {
+    .wrapper {
+        .welcome {
+            .nav {
+                top: -10%;
+                left: 50%;
+                height: 10%;
+                transform: translateX(-50%);
+                width: 50%;
+            }
+
+            .nav.show {
+                top: 0;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+
+            p {
+                font-size: 3em;
+
+            }
+
+            .title {
+                font-size: 4em;
+            }
+        }
+
+        .country-search {
+            .swiper-container {
+                .country-card {
+                    .country-card-header {
+                        .country-name {
+                            font-size: 3em;
+                        }
+                    }
+
+                    .country-facts {
+                        font-size: 2em;
+                    }
+                }
+            }
+
+        }
+    }
+}

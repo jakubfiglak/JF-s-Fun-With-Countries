@@ -1,0 +1,21 @@
+@import 'mixins';
+
+@media (min-width: 533px) and (orientation: landscape) {
+    .wrapper {
+        .welcome {
+            .hero img {
+                width: 70%;
+            }
+
+            .title {
+                font-size: 2.5em;
+            }
+        }
+
+        .country-search {
+            height: 150vh;
+        }
+    }
+
+
+}
